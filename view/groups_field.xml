@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="fleet_vehicle_log_services_form_inherit_2" model="ir.ui.view">
+        <field name="name">fleet.vehicle.log.services.form.inherit.2</field>
+        <field name="model">fleet.vehicle.log.services</field>
+        <field name="inherit_id" ref="fleet_service_with_deduction.fleet_vehicle_log_services_form_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='start_date']" position="before">
+                <field name="groups_ids" invisible='1'/>
+                <field name="is_rop" invisible='1'/>
+            </xpath>
+            <xpath expr="//field[@name='start_date']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+        </field>
+    </record> 
+
+
+    <record id="fleet_vehicle_view_form_inherit" model="ir.ui.view">
+        <field name="name">Flotta</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state_id']" position="before">
+                <field name="is_rop" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='state_id']" position="attributes">
+                <attribute name="attrs">{'invisible': [('is_rop', '=', False)]}</attribute>
+                <attribute name="options">{'clickable': True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='model_id']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='category_id']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='license_plate']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='tag_ids']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='driver_id']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)], 'no_create': True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='future_driver_id']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='plan_to_change_car']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='next_assignation_date']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='company_id']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='capacity_vehicle']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='euro']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='license_request']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='acquisition_date']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='license_request']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='write_off_date']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='vin_sn']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='odometer']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='odometer_unit']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='manager_id']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='location']" position="attributes">
+                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
