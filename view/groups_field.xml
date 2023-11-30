@@ -24,10 +24,6 @@
             <xpath expr="//field[@name='state_id']" position="before">
                 <field name="is_rop" invisible="1"/>
             </xpath>
-            <xpath expr="//field[@name='state_id']" position="attributes">
-                <attribute name="attrs">{'invisible': [('is_rop', '=', False)]}</attribute>
-                <attribute name="options">{'clickable': True}</attribute>
-            </xpath>
             <xpath expr="//field[@name='model_id']" position="attributes">
                 <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
             </xpath>
@@ -67,9 +63,7 @@
             <xpath expr="//field[@name='acquisition_date']" position="attributes">
                 <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
             </xpath>
-            <xpath expr="//field[@name='license_request']" position="attributes">
-                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
-            </xpath>
+
             <xpath expr="//field[@name='write_off_date']" position="attributes">
                 <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
             </xpath>
