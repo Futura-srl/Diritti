@@ -9,8 +9,9 @@
                 <field name="groups_ids" invisible='1'/>
                 <field name="is_rop" invisible='1'/>
             </xpath>
-            <xpath expr="//field[@name='start_date']" position="attributes">
-                <attribute name="attrs">{'readonly': [('is_rop', '=', True)]}</attribute>
+            <xpath expr="//field[@name='start_date'][1]" position="attributes">
+                <!-- <attribute name="attrs">{'invisible': [('is_rop', '!=', False)]}</attribute> -->
+                <attribute name="groups">fleet.fleet_group_manager,__export__.res_groups_137_2440cc2b</attribute>
             </xpath>
         </field>
     </record> 
