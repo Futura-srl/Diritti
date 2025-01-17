@@ -1,0 +1,6 @@
+<odoo>
+   <record id="rop_group" model="res.groups">
+       <field name="name">Rop</field>
+       <field name="category_id" ref="base.module_category_hidden"/>
+   </record>
+</odoo>
