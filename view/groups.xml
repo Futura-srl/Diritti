@@ -1,6 +1,89 @@
 <odoo>
-   <record id="rop_group" model="res.groups">
-       <field name="name">Rop</field>
-       <field name="category_id" ref="base.module_category_hidden"/>
+    <record id="officier_rop_reading_anomalies_group" model="res.groups">
+       <field name="name">Officier: Reading anomalies</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
    </record>
+   <record id="rop_group" model="res.groups">
+       <field name="name">ROP</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+    <record id="cobo_group" model="res.groups">
+       <field name="name">COBO</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+    <record id="copd_group" model="res.groups">
+       <field name="name">COPD</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+    <record id="padis_bl_group" model="res.groups">
+       <field name="name">PADIS (BL)</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+    <record id="padis_mo_group" model="res.groups">
+       <field name="name">PADIS (MO)</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+    <record id="tnaut_group" model="res.groups">
+       <field name="name">TNAUT</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+    <record id="piolt_group" model="res.groups">
+       <field name="name">PIOLT</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+    <record id="lain_group" model="res.groups">
+       <field name="name">LAIN</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+    <record id="tidis_group" model="res.groups">
+       <field name="name">TIDIS</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+    <record id="getr_group" model="res.groups">
+       <field name="name">GETR</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+    <record id="fraut_group" model="res.groups">
+       <field name="name">FRAUT</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+
+    <record id="parm_group" model="res.groups">
+       <field name="name">PARM</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+    <record id="roco_group" model="res.groups">
+       <field name="name">ROCO</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+    <record id="comi_group" model="res.groups">
+       <field name="name">COMI</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+    <record id="fepd_group" model="res.groups">
+       <field name="name">FEPD</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+    <record id="gene_group" model="res.groups">
+       <field name="name">GENE</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+    <record id="ltaut_group" model="res.groups">
+       <field name="name">LTAUT</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+    <record id="rmaut_group" model="res.groups">
+       <field name="name">RMAUT</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+    <record id="tito_scalo_group" model="res.groups">
+       <field name="name">TITO SCALO</field>
+       <field name="category_id" ref="fleet.module_fleet_category"/>
+   </record>
+
+    <!-- gruppo developer -->
+    <record id="developer_group" model="res.groups">
+       <field name="name">Developer</field>
+   </record>
+
 </odoo>
