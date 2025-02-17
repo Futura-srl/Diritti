@@ -53,15 +53,15 @@
             <xpath expr="//field[@name='company_id']" position="attributes">
                 <attribute name="readonly">is_rop == True</attribute>
             </xpath>
-            <xpath expr="//field[@name='capacity_vehicle']" position="attributes">
+            <!-- <xpath expr="//field[@name='capacity_vehicle']" position="attributes">
                 <attribute name="readonly">is_rop == True</attribute>
             </xpath>
-            <xpath expr="//field[@name='euro']" position="attributes">
+           <xpath expr="//field[@name='euro']" position="attributes">
                 <attribute name="readonly">is_rop == True</attribute>
             </xpath>
             <xpath expr="//field[@name='license_request']" position="attributes">
                 <attribute name="readonly">is_rop == True</attribute>
-            </xpath>
+            </xpath> -->
             <xpath expr="//field[@name='acquisition_date']" position="attributes">
                 <attribute name="readonly">is_rop == True</attribute>
             </xpath>
