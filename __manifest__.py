@@ -7,7 +7,7 @@
     'depends': ['fleet','carburante'],
     'data': [
         # # Settaggi per accesso ai contenuti
-        #'data/ir.model.access.csv',
+        'data/ir.model.access.csv',
         # # Caricamento delle view,
         'view/groups_field.xml',
         'view/groups.xml',

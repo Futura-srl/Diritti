@@ -86,4 +86,16 @@
        <field name="name">Developer</field>
    </record>
 
+    <!-- Gruppo per gestione addebiti/detrazioni   -->
+    <record model="ir.module.category" id="Diritti.module_category_human_resources_detractions">
+        <field name="name">Detrazioni dipendenti</field>
+        <field name="description">Approvals related to HR processes</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="hr_detraction_anomalies_group" model="res.groups">
+       <field name="name">Hr: Gestione detrazioni</field>
+       <field name="category_id" ref="Diritti.module_category_human_resources_detractions"/>
+    </record>
+
 </odoo>
