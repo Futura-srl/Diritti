@@ -1,6 +1,6 @@
 {
     'name': 'diritti',
-    'version': '17.0',
+    'version': '19.0.1.0.0',
     'author': "Luca Cocozza",
     'application': True,
     'description': "Aggiunta del campo groups_ids da poter integrare nei moduli.",
