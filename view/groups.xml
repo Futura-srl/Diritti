@@ -1,84 +1,84 @@
 <odoo>
     <record id="officier_rop_reading_anomalies_group" model="res.groups">
        <field name="name">Officier: Reading anomalies</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
    <record id="rop_group" model="res.groups">
        <field name="name">ROP</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
     <record id="cobo_group" model="res.groups">
        <field name="name">COBO</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
     <record id="copd_group" model="res.groups">
        <field name="name">COPD</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
     <record id="padis_bl_group" model="res.groups">
        <field name="name">PADIS (BL)</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
     <record id="padis_mo_group" model="res.groups">
        <field name="name">PADIS (MO)</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
     <record id="tnaut_group" model="res.groups">
        <field name="name">TNAUT</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
     <record id="piolt_group" model="res.groups">
        <field name="name">PIOLT</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
     <record id="lain_group" model="res.groups">
        <field name="name">LAIN</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
     <record id="tidis_group" model="res.groups">
        <field name="name">TIDIS</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
     <record id="getr_group" model="res.groups">
        <field name="name">GETR</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
     <record id="fraut_group" model="res.groups">
        <field name="name">FRAUT</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
 
     <record id="parm_group" model="res.groups">
        <field name="name">PARM</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
     <record id="roco_group" model="res.groups">
        <field name="name">ROCO</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
     <record id="comi_group" model="res.groups">
        <field name="name">COMI</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
     <record id="fepd_group" model="res.groups">
        <field name="name">FEPD</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
     <record id="gene_group" model="res.groups">
        <field name="name">GENE</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
     <record id="ltaut_group" model="res.groups">
        <field name="name">LTAUT</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
     <record id="rmaut_group" model="res.groups">
        <field name="name">RMAUT</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
     <record id="tito_scalo_group" model="res.groups">
        <field name="name">TITO SCALO</field>
-       <field name="category_id" ref="fleet.module_fleet_category"/>
+       <field name="privilege_id" ref="fleet.res_groups_privilege_fleet"/>
    </record>
 
     <!-- gruppo developer -->
@@ -93,9 +93,18 @@
         <field name="sequence">10</field>
     </record>
 
+    <!-- In Odoo 19 un res.groups non punta piu' direttamente a ir.module.category:
+         nel mezzo c'e' res.groups.privilege (gruppo -> privilege -> categoria).
+         La categoria sopra resta valida, ma serve il privilege che la referenzia. -->
+    <record model="res.groups.privilege" id="res_groups_privilege_hr_detractions">
+        <field name="name">Detrazioni dipendenti</field>
+        <field name="sequence">10</field>
+        <field name="category_id" ref="Diritti.module_category_human_resources_detractions"/>
+    </record>
+
     <record id="hr_detraction_anomalies_group" model="res.groups">
        <field name="name">Hr: Gestione detrazioni</field>
-       <field name="category_id" ref="Diritti.module_category_human_resources_detractions"/>
+       <field name="privilege_id" ref="res_groups_privilege_hr_detractions"/>
     </record>
 
 </odoo>
