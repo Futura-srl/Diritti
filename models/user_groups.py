@@ -14,8 +14,8 @@ class Diritti(models.Model):
             # Trova l'utente connesso
             user = self.env.user
             # Ottieni gli identificatori dei gruppi dell'utente connesso
-            record.groups_ids = str(user.groups_id.ids)
-            if 116 in user.groups_id.ids:
+            record.groups_ids = str(user.group_ids.ids)
+            if 116 in user.group_ids.ids:
                 record.is_rop = True
             else:
                 record.is_rop = False
@@ -34,8 +34,8 @@ class FleetVehicleInherit(models.Model):
             # Trova l'utente connesso
             user = self.env.user
             # Ottieni gli identificatori dei gruppi dell'utente connesso
-            record.groups_ids = str(user.groups_id.ids)
-            if 116 in user.groups_id.ids:
+            record.groups_ids = str(user.group_ids.ids)
+            if 116 in user.group_ids.ids:
                 record.is_rop = True
             else:
                 record.is_rop = False
